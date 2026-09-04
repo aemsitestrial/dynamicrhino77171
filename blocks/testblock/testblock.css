@@ -1,0 +1,17 @@
+.testblock {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 1rem;
+}
+
+.testblock img {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+@media (max-width: 600px) {
+	.testblock {
+		grid-template-columns: 1fr;
+	}
+}
