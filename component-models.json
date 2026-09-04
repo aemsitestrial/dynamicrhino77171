@@ -219,10 +219,11 @@
     "id": "testblock",
     "fields": [
       {
-        "component": "image",
+        "component": "reference",
         "name": "image1",
         "label": "Image 1",
-        "value": ""
+        "value": "",
+        "multi": false
       },
       {
         "component": "text",
@@ -231,10 +232,11 @@
         "value": ""
       },
       {
-        "component": "image",
+        "component": "reference",
         "name": "image2",
         "label": "Image 2",
-        "value": ""
+        "value": "",
+        "multi": false
       },
       {
         "component": "text",
