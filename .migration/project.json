@@ -1,0 +1,15 @@
+{
+  "sites": {
+    "dynamicrhino77171": {
+      "previewOrg": "aemsitestrial",
+      "previewSite": "dynamicrhino77171",
+      "contentHostUrl": "author-p153710-e1614654.adobeaemcloud.com",
+      "aemSitePath": "/content/2026/36/dynamicrhino77171",
+      "aemAssetsFolderPath": "/content/dam/2026/36/dynamicrhino77171",
+      "aemSiteName": "dynamicrhino77171",
+      "aemSiteTitle": "dynamicrhino77171",
+      "libraryUrl": "https://github.com/aemsitestrial/dynamicrhino77171",
+      "baseUrl": "https://main--dynamicrhino77171--aemsitestrial.aem.live"
+    }
+  }
+}

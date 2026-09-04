@@ -1,0 +1,46 @@
+.banner-container .banner-wrapper {
+  max-width: unset;
+  padding: 0;
+}
+
+.banner {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 48px 24px;
+  min-height: 280px;
+  overflow: hidden;
+}
+
+.banner .banner-background {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+}
+
+.banner .banner-background picture,
+.banner .banner-background img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.banner .banner-content {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  color: var(--background-color);
+}
+
+.banner .banner-content > * {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+@media (width >= 900px) {
+  .banner {
+    padding: 64px 32px;
+    min-height: 360px;
+  }
+}
