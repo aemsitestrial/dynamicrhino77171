@@ -10,7 +10,7 @@
 	height: auto;
 }
 
-@media (max-width: 600px) {
+@media (width <= 600px) {
 	.testblock {
 		grid-template-columns: 1fr;
 	}
