@@ -1,0 +1,21 @@
+.word-and-definition {
+  margin: 1.5rem 0;
+  padding-left: 1rem;
+  border-left: 3px solid var(--link-color, #035fe6);
+}
+
+.word-and-definition .word-and-definition-term {
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.word-and-definition .word-and-definition-desc {
+  margin-top: 0.35rem;
+  color: var(--text-color, #131313);
+}
+
+.word-and-definition .word-and-definition-term > *,
+.word-and-definition .word-and-definition-desc > * {
+  margin: 0;
+}

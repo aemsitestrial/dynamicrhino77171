@@ -271,5 +271,24 @@
         "value": ""
       }
     ]
+  },
+  {
+    "id": "word-and-definition",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "word",
+        "label": "Word",
+        "value": ""
+      },
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "definition",
+        "label": "Definition",
+        "value": ""
+      }
+    ]
   }
 ]
