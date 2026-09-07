@@ -240,5 +240,36 @@
         "valueType": "string"
       }
     ]
+  },
+  {
+    "id": "testblock",
+    "fields": [
+      {
+        "component": "reference",
+        "name": "image1",
+        "label": "Image 1",
+        "value": "",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "name": "text1",
+        "label": "Text 1",
+        "value": ""
+      },
+      {
+        "component": "reference",
+        "name": "image2",
+        "label": "Image 2",
+        "value": "",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "name": "text2",
+        "label": "Text 2",
+        "value": ""
+      }
+    ]
   }
 ]
