@@ -242,7 +242,7 @@
     ]
   },
   {
-    "id": "testblock",
+    "id": "test-block",
     "fields": [
       {
         "component": "reference",
