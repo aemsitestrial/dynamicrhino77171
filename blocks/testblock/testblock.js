@@ -1,3 +1,21 @@
+function buildImage(imageRow) {
+  // A reference/image field may already be a <picture>, or it may render as an
+  // <a> link pointing at the asset (Universal Editor reference fields do this).
+  const picture = imageRow.querySelector('picture');
+  if (picture) return picture;
+
+  const link = imageRow.querySelector('a[href]');
+  if (link) {
+    const img = document.createElement('img');
+    img.src = link.getAttribute('href');
+    img.alt = link.textContent.trim();
+    img.loading = 'lazy';
+    return img;
+  }
+
+  return null;
+}
+
 export default function decorate(block) {
   const rows = [...block.children];
 
@@ -11,11 +29,11 @@ export default function decorate(block) {
     const item = document.createElement('div');
     item.className = 'testblock-item';
 
-    const picture = imageRow?.querySelector('picture');
-    if (picture) {
+    const image = imageRow ? buildImage(imageRow) : null;
+    if (image) {
       const media = document.createElement('div');
       media.className = 'testblock-image';
-      media.append(picture);
+      media.append(image);
       item.append(media);
     }
 
