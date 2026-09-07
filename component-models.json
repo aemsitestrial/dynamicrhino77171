@@ -253,6 +253,12 @@
       },
       {
         "component": "text",
+        "name": "image1Alt",
+        "label": "Image 1 Alt Text",
+        "value": ""
+      },
+      {
+        "component": "text",
         "name": "text1",
         "label": "Text 1",
         "value": ""
@@ -263,6 +269,12 @@
         "label": "Image 2",
         "value": "",
         "multi": false
+      },
+      {
+        "component": "text",
+        "name": "image2Alt",
+        "label": "Image 2 Alt Text",
+        "value": ""
       },
       {
         "component": "text",
