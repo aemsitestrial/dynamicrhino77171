@@ -1,0 +1,27 @@
+{
+  "variantName": "columns-gallery",
+  "baseBlock": "columns",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "dark",
+    "density": "medium",
+    "purpose": "photo-gallery",
+    "imagePattern": "image-only",
+    "structure": "3 x image",
+    "hasGrid": true
+  },
+  "contentPattern": {
+    "structure": "1 row x 3 cells: each cell = one image; equal-width image grid",
+    "buttonCount": 0,
+    "imageCount": 3
+  },
+  "options": [],
+  "memberVariantIds": ["columns-gallery"],
+  "usage": {
+    "pagesUsing": [
+      { "url": "https://wknd-adventures.com/", "instanceId": null, "screenshot": "migration-work/screenshot.png" }
+    ],
+    "reuseCount": 1,
+    "lastUsed": "2026-09-28T00:00:00.000Z"
+  }
+}

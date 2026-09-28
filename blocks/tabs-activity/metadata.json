@@ -1,0 +1,27 @@
+{
+  "variantName": "tabs-activity",
+  "baseBlock": "tabs",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "medium",
+    "purpose": "activity-article-tabs",
+    "imagePattern": "card-thumbnails",
+    "structure": "4 tabs x (3 x image + tag + h3 + paragraph + link)",
+    "hasGrid": true
+  },
+  "contentPattern": {
+    "structure": "one row per tab: cell 1 = tab label; cell 2 = rich text holding repeated articles (image, tag paragraph, H3 with link, description paragraph), decorated into a 3-up card grid",
+    "buttonCount": 0,
+    "imageCount": 12
+  },
+  "options": [],
+  "memberVariantIds": ["tabs-activity"],
+  "usage": {
+    "pagesUsing": [
+      { "url": "https://wknd-adventures.com/", "instanceId": null, "screenshot": "migration-work/screenshot.png" }
+    ],
+    "reuseCount": 1,
+    "lastUsed": "2026-09-28T00:00:00.000Z"
+  }
+}

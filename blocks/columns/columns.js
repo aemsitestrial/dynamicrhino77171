@@ -1,4 +1,28 @@
-export default function decorate(block) {
+import { loadCSS } from '../../scripts/aem.js';
+
+// Columns variants authored as "Columns (featured)" etc. AEM stores these as the core
+// Columns component with a class, so hand them off to the variant's own block code.
+const VARIANTS = ['featured', 'numbered', 'gallery'];
+
+async function decorateVariant(block, variant) {
+  const name = `columns-${variant}`;
+  block.classList.remove('columns', variant);
+  block.classList.add(name);
+  block.dataset.blockName = name;
+  block.parentElement?.classList.add(`${name}-wrapper`);
+  block.closest('.section')?.classList.add(`${name}-container`);
+  const base = `${window.hlx.codeBasePath}/blocks/${name}/${name}`;
+  const [mod] = await Promise.all([import(`${base}.js`), loadCSS(`${base}.css`)]);
+  await mod.default(block);
+}
+
+export default async function decorate(block) {
+  const variant = VARIANTS.find((v) => block.classList.contains(v));
+  if (variant) {
+    await decorateVariant(block, variant);
+    return;
+  }
+
   const cols = [...block.firstElementChild.children];
   block.classList.add(`columns-${cols.length}-cols`);
 

@@ -1,0 +1,169 @@
+/* hero-fullbleed: full-bleed background image hero (values from source .hero-section--full) */
+
+/* full-bleed: drop section padding and the content max-width wrapper */
+main > .section.hero-fullbleed-container {
+  padding: 0;
+}
+
+.hero-fullbleed-container .hero-fullbleed-wrapper {
+  max-width: none;
+  padding: 0;
+}
+
+.hero-fullbleed {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 65vh;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.hero-fullbleed .hero-fullbleed-media,
+.hero-fullbleed .hero-fullbleed-overlay {
+  position: absolute;
+  inset: 0;
+}
+
+.hero-fullbleed .hero-fullbleed-media {
+  z-index: -2;
+}
+
+.hero-fullbleed .hero-fullbleed-overlay {
+  z-index: -1;
+  background-image: linear-gradient(0deg, rgb(0 0 0 / 75%) 0, rgb(0 0 0 / 45%) 40%, rgb(0 0 0 / 25%));
+  pointer-events: none;
+}
+
+.hero-fullbleed .hero-fullbleed-media picture,
+.hero-fullbleed .hero-fullbleed-media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.hero-fullbleed .hero-fullbleed-media img {
+  max-width: none;
+  object-fit: cover;
+}
+
+/* content */
+.hero-fullbleed .hero-fullbleed-content {
+  position: relative;
+  z-index: 2;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: var(--content-max-width);
+  margin: 0 auto;
+  padding: 32px 16px;
+  color: var(--color-white);
+  text-shadow: 0 1px 3px rgb(0 0 0 / 35%);
+}
+
+.hero-fullbleed .hero-fullbleed-content > * {
+  max-width: 832px;
+}
+
+/* eyebrow tag pill */
+.hero-fullbleed .hero-fullbleed-content > .hero-fullbleed-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  margin: 0;
+  padding: 5px 8px 3px;
+  border-radius: var(--radius-full);
+  background-color: var(--color-amber);
+  color: var(--color-white);
+  font-family: var(--heading-font-family);
+  font-size: 10.4px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  line-height: 1.6;
+  text-shadow: none;
+}
+
+.hero-fullbleed .hero-fullbleed-content h1 {
+  margin: 16px 0 24px;
+  color: var(--color-white);
+  font-size: var(--heading-font-size-xxl);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+/* lead paragraph */
+.hero-fullbleed .hero-fullbleed-content > p:not(.hero-fullbleed-eyebrow) {
+  max-width: 608px;
+  margin: 0 0 24px;
+  color: rgb(255 255 255 / 85%);
+  font-size: 20px;
+  line-height: 1.6;
+}
+
+/* CTA row */
+.hero-fullbleed .hero-fullbleed-actions {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: flex-start;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+main .hero-fullbleed .hero-fullbleed-actions .button-container {
+  display: block;
+  width: 100%;
+  margin: 0;
+}
+
+/* primary (strong): amber accent button */
+main .hero-fullbleed a.button.primary:any-link {
+  border-color: var(--color-amber);
+  background-color: var(--color-amber);
+  color: var(--color-black);
+  box-shadow: 3px 3px 0 0 var(--color-black);
+}
+
+main .hero-fullbleed a.button.primary:hover {
+  box-shadow: 5px 5px 0 0 var(--color-black);
+  transform: translate(-2px, -2px);
+}
+
+/* secondary (em): ghost button */
+main .hero-fullbleed a.button.secondary:any-link {
+  border-color: rgb(255 255 255 / 50%);
+  background-color: transparent;
+  color: var(--color-white);
+  font-style: normal;
+  box-shadow: 3px 3px 0 0 var(--color-black);
+}
+
+main .hero-fullbleed a.button.secondary:hover {
+  border-color: var(--color-amber);
+  background-color: var(--color-amber);
+  color: var(--color-black);
+  box-shadow: 5px 5px 0 0 var(--color-black);
+  transform: translate(-2px, -2px);
+}
+
+main .hero-fullbleed a.button.primary:active,
+main .hero-fullbleed a.button.secondary:active {
+  box-shadow: 1px 1px 0 0 var(--color-black);
+  transform: translate(0);
+}
+
+.hero-fullbleed.hero-fullbleed-no-image {
+  min-height: unset;
+}
+
+@media (width >= 769px) {
+  .hero-fullbleed .hero-fullbleed-content {
+    padding: 64px 24px;
+  }
+
+  .hero-fullbleed .hero-fullbleed-actions {
+    flex-direction: row;
+    align-items: normal;
+  }
+
+  main .hero-fullbleed .hero-fullbleed-actions .button-container {
+    width: auto;
+  }
+}

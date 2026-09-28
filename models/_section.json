@@ -33,6 +33,22 @@
             {
               "name": "Highlight",
               "value": "highlight"
+            },
+            {
+              "name": "Secondary (cream)",
+              "value": "secondary"
+            },
+            {
+              "name": "Dark",
+              "value": "dark"
+            },
+            {
+              "name": "Accent (orange)",
+              "value": "accent"
+            },
+            {
+              "name": "Ticker (scrolling strip)",
+              "value": "ticker"
             }
           ]
         }
@@ -53,7 +69,13 @@
         "word-and-definition",
         "cards",
         "columns",
-        "fragment"
+        "fragment",
+        "hero-fullbleed",
+        "columns-featured",
+        "tabs-activity",
+        "accordion-faq",
+        "columns-numbered",
+        "columns-gallery"
       ]
     }
   ]

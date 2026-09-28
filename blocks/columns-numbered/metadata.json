@@ -1,0 +1,27 @@
+{
+  "variantName": "columns-numbered",
+  "baseBlock": "columns",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "light-secondary",
+    "density": "spacious",
+    "purpose": "numbered-editorial-list",
+    "imagePattern": "noimg",
+    "structure": "3 x number | h3 + paragraph",
+    "hasGrid": true
+  },
+  "contentPattern": {
+    "structure": "3 rows x 2 cells: cell 1 = number text (01, 02, 03); cell 2 = H3 + paragraph; rows stacked with divider rules",
+    "buttonCount": 0,
+    "imageCount": 0
+  },
+  "options": [],
+  "memberVariantIds": ["columns-numbered"],
+  "usage": {
+    "pagesUsing": [
+      { "url": "https://wknd-adventures.com/", "instanceId": null, "screenshot": "migration-work/screenshot.png" }
+    ],
+    "reuseCount": 1,
+    "lastUsed": "2026-09-28T00:00:00.000Z"
+  }
+}

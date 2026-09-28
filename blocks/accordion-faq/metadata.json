@@ -1,0 +1,26 @@
+{
+  "variantName": "accordion-faq",
+  "baseBlock": "accordion",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "compact",
+    "purpose": "faq",
+    "imagePattern": "noimg",
+    "structure": "3 x question + answer"
+  },
+  "contentPattern": {
+    "structure": "one row per item: cell 1 = question (summary text); cell 2 = answer rich text",
+    "buttonCount": 0,
+    "imageCount": 0
+  },
+  "options": [],
+  "memberVariantIds": ["accordion-faq"],
+  "usage": {
+    "pagesUsing": [
+      { "url": "https://wknd-adventures.com/", "instanceId": null, "screenshot": "migration-work/screenshot.png" }
+    ],
+    "reuseCount": 1,
+    "lastUsed": "2026-09-28T00:00:00.000Z"
+  }
+}

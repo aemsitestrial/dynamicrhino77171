@@ -33,6 +33,31 @@
           "name": "rows",
           "value": "",
           "label": "Rows"
+        },
+        {
+          "component": "select",
+          "name": "classes",
+          "value": "",
+          "label": "Variant",
+          "valueType": "string",
+          "options": [
+            {
+              "name": "Default",
+              "value": ""
+            },
+            {
+              "name": "Featured",
+              "value": "featured"
+            },
+            {
+              "name": "Numbered",
+              "value": "numbered"
+            },
+            {
+              "name": "Gallery",
+              "value": "gallery"
+            }
+          ]
         }
       ]
     }

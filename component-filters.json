@@ -18,7 +18,19 @@
       "word-and-definition",
       "cards",
       "columns",
-      "fragment"
+      "fragment",
+      "hero-fullbleed",
+      "columns-featured",
+      "tabs-activity",
+      "accordion-faq",
+      "columns-numbered",
+      "columns-gallery"
+    ]
+  },
+  {
+    "id": "accordion-faq",
+    "components": [
+      "accordion-faq-item"
     ]
   },
   {
@@ -40,6 +52,12 @@
       "image",
       "button",
       "title"
+    ]
+  },
+  {
+    "id": "tabs-activity",
+    "components": [
+      "tabs-activity-item"
     ]
   }
 ]

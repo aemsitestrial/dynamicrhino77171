@@ -1,0 +1,27 @@
+{
+  "variantName": "columns-featured",
+  "baseBlock": "columns",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "light-secondary",
+    "density": "medium",
+    "purpose": "featured-article",
+    "imagePattern": "half-width",
+    "structure": "image | tag + h2 + paragraph + CTA",
+    "hasGrid": true
+  },
+  "contentPattern": {
+    "structure": "1 row x 2 cells: cell 1 = image; cell 2 = eyebrow paragraph, H2, paragraph, CTA link",
+    "buttonCount": 1,
+    "imageCount": 1
+  },
+  "options": [],
+  "memberVariantIds": ["columns-featured"],
+  "usage": {
+    "pagesUsing": [
+      { "url": "https://wknd-adventures.com/", "instanceId": null, "screenshot": "migration-work/screenshot.png" }
+    ],
+    "reuseCount": 1,
+    "lastUsed": "2026-09-28T00:00:00.000Z"
+  }
+}

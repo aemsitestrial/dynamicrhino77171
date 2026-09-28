@@ -304,6 +304,17 @@ function createOptimizedPicture(
 ) {
   const url = new URL(src, window.location.href);
   const picture = document.createElement('picture');
+
+  // external images can't use the same-origin optimization params; keep the full URL
+  if (url.origin !== window.location.origin) {
+    const img = document.createElement('img');
+    img.setAttribute('loading', eager ? 'eager' : 'lazy');
+    img.setAttribute('alt', alt);
+    img.setAttribute('src', url.href);
+    picture.appendChild(img);
+    return picture;
+  }
+
   const { pathname } = url;
   const ext = pathname.substring(pathname.lastIndexOf('.') + 1);
 

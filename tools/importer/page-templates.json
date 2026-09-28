@@ -1,0 +1,184 @@
+{
+  "metadata": {
+    "projectType": "xwalk"
+  },
+  "templates": [
+    {
+      "name": "home",
+      "urls": [
+        "https://wknd-adventures.com/"
+      ],
+      "representativeUrl": "https://wknd-adventures.com/",
+      "description": "WKND Adventures homepage: full-bleed hero, featured article, activity tabs, ticker strip, start-here CTA, FAQ, numbered editorial list, photo gallery, closing CTA",
+      "urlPattern": "/",
+      "blocks": [
+        {
+          "name": "hero-fullbleed",
+          "instances": [
+            "section.hero-section.hero-section--full"
+          ]
+        },
+        {
+          "name": "columns-featured",
+          "instances": [
+            ".featured-article"
+          ]
+        },
+        {
+          "name": "tabs-activity",
+          "instances": [
+            ".tab-container"
+          ]
+        },
+        {
+          "name": "accordion-faq",
+          "instances": [
+            ".faq-list"
+          ]
+        },
+        {
+          "name": "columns-numbered",
+          "instances": [
+            ".editorial-index"
+          ]
+        },
+        {
+          "name": "columns-gallery",
+          "instances": [
+            ".grid-layout.grid-images"
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "id": "1",
+          "name": "hero",
+          "selector": [
+            "section.hero-section.hero-section--full"
+          ],
+          "style": null,
+          "blocks": [
+            "hero-fullbleed"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "2",
+          "name": "featured-article",
+          "selector": [
+            "section.secondary-section:has(.featured-article)",
+            "#main-content > section.section.secondary-section:nth-of-type(2)"
+          ],
+          "style": "secondary",
+          "blocks": [
+            "columns-featured"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "3",
+          "name": "browse-by-activity",
+          "selector": [
+            "section.section:has(.tab-container)",
+            "#main-content > section.section:nth-of-type(3)"
+          ],
+          "style": null,
+          "blocks": [
+            "tabs-activity"
+          ],
+          "defaultContent": [
+            ".section-heading"
+          ]
+        },
+        {
+          "id": "4",
+          "name": "ticker",
+          "selector": [
+            ".ticker-strip"
+          ],
+          "style": "ticker",
+          "blocks": [],
+          "defaultContent": [
+            ".ticker-track"
+          ]
+        },
+        {
+          "id": "5",
+          "name": "start-here",
+          "selector": [
+            "section.inverse-section:not(:has(.grid-images))",
+            "#main-content > section.section.inverse-section:nth-of-type(4)"
+          ],
+          "style": "dark",
+          "blocks": [],
+          "defaultContent": [
+            ".container > .tag",
+            ".container > h2",
+            ".container > p.paragraph-lg",
+            ".button-group"
+          ]
+        },
+        {
+          "id": "6",
+          "name": "quick-answers",
+          "selector": [
+            "section.section:has(.faq-list)",
+            "#main-content > section.section:nth-of-type(5)"
+          ],
+          "style": null,
+          "blocks": [
+            "accordion-faq"
+          ],
+          "defaultContent": [
+            ".section-heading"
+          ]
+        },
+        {
+          "id": "7",
+          "name": "how-we-work",
+          "selector": [
+            "section.secondary-section:has(.editorial-index)",
+            "#main-content > section.section.secondary-section:nth-of-type(6)"
+          ],
+          "style": "secondary",
+          "blocks": [
+            "columns-numbered"
+          ],
+          "defaultContent": [
+            ".section-heading"
+          ]
+        },
+        {
+          "id": "8",
+          "name": "in-the-field",
+          "selector": [
+            "section.inverse-section:has(.grid-images)",
+            "#main-content > section.section.inverse-section:nth-of-type(7)"
+          ],
+          "style": "dark",
+          "blocks": [
+            "columns-gallery"
+          ],
+          "defaultContent": [
+            ".section-heading",
+            ".utility-margin-top-lg"
+          ]
+        },
+        {
+          "id": "9",
+          "name": "closing-cta",
+          "selector": [
+            "section.accent-section"
+          ],
+          "style": "accent",
+          "blocks": [],
+          "defaultContent": [
+            ".container > h2",
+            ".container > p",
+            ".button-group"
+          ]
+        }
+      ]
+    }
+  ]
+}

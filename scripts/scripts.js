@@ -76,12 +76,26 @@ function buildAutoBlocks() {
  * @param {Element} main The main element
  */
 // eslint-disable-next-line import/prefer-default-export
+/**
+ * Turns the list in a "ticker" section into a seamlessly looping marquee
+ * by appending a hidden duplicate copy (the wrapper scrolls by -50%).
+ * @param {Element} main The container element
+ */
+function decorateTicker(main) {
+  main.querySelectorAll('.section.ticker ul:only-of-type').forEach((list) => {
+    const copy = list.cloneNode(true);
+    copy.setAttribute('aria-hidden', 'true');
+    list.after(copy);
+  });
+}
+
 export function decorateMain(main) {
   // hopefully forward compatible button decoration
   decorateButtons(main);
   decorateIcons(main);
   buildAutoBlocks(main);
   decorateSections(main);
+  decorateTicker(main);
   decorateBlocks(main);
 }
 

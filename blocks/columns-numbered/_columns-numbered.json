@@ -1,0 +1,22 @@
+{
+  "definitions": [
+    {
+      "title": "Columns Numbered",
+      "id": "columns-numbered",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/franklin/components/columns/v1/columns",
+            "template": {
+              "columns": "2",
+              "rows": "3",
+              "classes": "numbered"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "models": [],
+  "filters": []
+}

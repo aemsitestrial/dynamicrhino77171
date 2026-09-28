@@ -83,6 +83,38 @@
       "id": "blocks",
       "components": [
         {
+          "title": "Accordion Faq",
+          "id": "accordion-faq",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Accordion Faq",
+                  "filter": "accordion-faq"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Accordion Faq Item",
+          "id": "accordion-faq-item",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "Accordion Faq Item",
+                  "model": "accordion-faq-item",
+                  "summary": "Question",
+                  "text": "<p>Answer</p>"
+                }
+              }
+            }
+          }
+        },
+        {
           "title": "Banner",
           "id": "banner",
           "plugins": {
@@ -128,6 +160,54 @@
           }
         },
         {
+          "title": "Columns Featured",
+          "id": "columns-featured",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/columns/v1/columns",
+                "template": {
+                  "columns": "2",
+                  "rows": "1",
+                  "classes": "featured"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Columns Gallery",
+          "id": "columns-gallery",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/columns/v1/columns",
+                "template": {
+                  "columns": "3",
+                  "rows": "1",
+                  "classes": "gallery"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Columns Numbered",
+          "id": "columns-numbered",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/columns/v1/columns",
+                "template": {
+                  "columns": "2",
+                  "rows": "3",
+                  "classes": "numbered"
+                }
+              }
+            }
+          }
+        },
+        {
           "title": "Columns",
           "id": "columns",
           "plugins": {
@@ -158,6 +238,21 @@
           }
         },
         {
+          "title": "Hero Fullbleed",
+          "id": "hero-fullbleed",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Hero Fullbleed",
+                  "model": "hero-fullbleed"
+                }
+              }
+            }
+          }
+        },
+        {
           "title": "Hero",
           "id": "hero",
           "plugins": {
@@ -167,6 +262,37 @@
                 "template": {
                   "name": "Hero",
                   "model": "hero"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Tabs Activity",
+          "id": "tabs-activity",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Tabs Activity",
+                  "filter": "tabs-activity"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Tabs Activity Item",
+          "id": "tabs-activity-item",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "Tabs Activity Item",
+                  "model": "tabs-activity-item",
+                  "tab": "Tab"
                 }
               }
             }
