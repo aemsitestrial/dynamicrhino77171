@@ -59,52 +59,6 @@ function buildCard(elements) {
   return card;
 }
 
-/**
- * Decorate a tab panel's rich text into a grid of article cards. A new card starts at each
- * image, or at a heading when the current card already has one (image-less articles).
- * Anything authored before the first card stays above the grid as panel intro.
- */
-function decoratePanelContent(cell) {
-  const children = [...cell.children];
-  const groups = [];
-  const intro = [];
-  let current = null;
-
-  children.forEach((el) => {
-    const isImage = hasPicture(el);
-    const isHeading = el.matches(HEADING_SELECTOR);
-    const hasHeading = !!current && current.some((c) => c.matches(HEADING_SELECTOR));
-    const hasImage = !!current && current.some(hasPicture);
-    let startsCard = false;
-    if (isImage) startsCard = !current || hasImage || hasHeading;
-    else if (isHeading) startsCard = !current || hasHeading;
-
-    if (startsCard) {
-      current = [el];
-      groups.push(current);
-    } else if (current) {
-      current.push(el);
-    } else {
-      intro.push(el);
-    }
-  });
-
-  if (!groups.length) return;
-
-  const grid = document.createElement('div');
-  grid.className = 'tabs-activity-grid';
-  groups.forEach((els) => grid.append(buildCard(els)));
-
-  if (intro.length) {
-    const introEl = document.createElement('div');
-    introEl.className = 'tabs-activity-intro';
-    introEl.append(...intro);
-    cell.append(introEl);
-  }
-  cell.append(grid);
-  optimizePictures(grid);
-}
-
 function selectTab(block, tablist, button, tabpanel, focus = false) {
   block.querySelectorAll(':scope > [role=tabpanel]').forEach((panel) => {
     panel.setAttribute('aria-hidden', true);
@@ -129,19 +83,29 @@ export default async function decorate(block) {
   tablist.setAttribute('role', 'tablist');
   tablist.id = `tabs-activity-tablist-${tabBlockCnt}`;
 
-  // one row per tab: cell 1 = label, cell 2 = rich-text panel content
-  const rows = [...block.children].filter((row) => row.firstElementChild
-    && row.firstElementChild.textContent.trim() !== '');
+  // one row per article: cell 1 = tab name, remaining cells = image and text.
+  // Rows with the same tab name are grouped into one panel.
+  const groups = [];
+  [...block.children].forEach((row) => {
+    const [labelCell, ...contentCells] = [...row.children];
+    const name = labelCell ? labelCell.textContent.trim() : '';
+    if (!name) return;
+    let group = groups.find((g) => g.name === name);
+    if (!group) {
+      group = { name, rows: [] };
+      groups.push(group);
+    }
+    group.rows.push({ row, contentCells });
+  });
 
-  rows.forEach((row, i) => {
+  const panels = groups.map((group, i) => {
     const id = `tabs-activity-${tabBlockCnt}-panel-${i + 1}`;
-    const label = row.firstElementChild;
-
-    row.className = 'tabs-activity-panel';
-    row.id = id;
-    row.setAttribute('role', 'tabpanel');
-    row.setAttribute('aria-hidden', !!i);
-    row.setAttribute('aria-labelledby', `tab-${id}`);
+    const panel = document.createElement('div');
+    panel.className = 'tabs-activity-panel';
+    panel.id = id;
+    panel.setAttribute('role', 'tabpanel');
+    panel.setAttribute('aria-hidden', !!i);
+    panel.setAttribute('aria-labelledby', `tab-${id}`);
 
     const button = document.createElement('button');
     button.className = 'tabs-activity-tab';
@@ -151,20 +115,31 @@ export default async function decorate(block) {
     button.setAttribute('aria-controls', id);
     button.setAttribute('aria-selected', !i);
     if (i) button.setAttribute('tabindex', '-1');
-    const labelInner = label.querySelector(`${HEADING_SELECTOR}, p`);
-    button.textContent = (labelInner || label).textContent.trim();
-    button.addEventListener('click', () => selectTab(block, tablist, button, row));
+    button.textContent = group.name;
+    button.addEventListener('click', () => selectTab(block, tablist, button, panel));
     tablist.append(button);
 
-    // remove the label cell (also removes it from the UE tree)
-    label.remove();
-
-    // all remaining cells form the panel content
-    [...row.children].forEach((cell) => {
-      cell.classList.add('tabs-activity-panel-content');
-      decoratePanelContent(cell);
+    const content = document.createElement('div');
+    content.className = 'tabs-activity-panel-content';
+    const grid = document.createElement('div');
+    grid.className = 'tabs-activity-grid';
+    group.rows.forEach(({ row, contentCells }) => {
+      const elements = contentCells.flatMap((cell) => {
+        const pic = cell.querySelector('picture');
+        if (pic && cell.children.length === 1) return [cell.firstElementChild];
+        return [...cell.children];
+      });
+      const card = buildCard(elements);
+      moveInstrumentation(row, card);
+      grid.append(card);
+      row.remove();
     });
+    content.append(grid);
+    panel.append(content);
+    optimizePictures(grid);
+    return panel;
   });
+  block.append(...panels);
 
   // arrow-key navigation between tabs
   tablist.addEventListener('keydown', (e) => {
@@ -178,7 +153,7 @@ export default async function decorate(block) {
     else if (e.key === 'End') next = buttons.length - 1;
     if (next < 0) return;
     e.preventDefault();
-    selectTab(block, tablist, buttons[next], rows[next], true);
+    selectTab(block, tablist, buttons[next], panels[next], true);
   });
 
   block.prepend(tablist);

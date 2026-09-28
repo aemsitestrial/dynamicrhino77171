@@ -33,6 +33,22 @@
             {
               "name": "Highlight",
               "value": "highlight"
+            },
+            {
+              "name": "Secondary (cream)",
+              "value": "secondary"
+            },
+            {
+              "name": "Dark",
+              "value": "dark"
+            },
+            {
+              "name": "Accent (orange)",
+              "value": "accent"
+            },
+            {
+              "name": "Ticker (scrolling strip)",
+              "value": "ticker"
             }
           ]
         }

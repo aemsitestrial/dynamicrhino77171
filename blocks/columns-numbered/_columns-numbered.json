@@ -9,40 +9,14 @@
             "resourceType": "core/franklin/components/columns/v1/columns",
             "template": {
               "columns": "2",
-              "rows": "3"
+              "rows": "3",
+              "classes": "numbered"
             }
           }
         }
       }
     }
   ],
-  "models": [
-    {
-      "id": "columns-numbered",
-      "fields": [
-        {
-          "component": "text",
-          "valueType": "number",
-          "name": "columns",
-          "value": "",
-          "label": "Columns"
-        },
-        {
-          "component": "text",
-          "valueType": "number",
-          "name": "rows",
-          "value": "",
-          "label": "Rows"
-        }
-      ]
-    }
-  ],
-  "filters": [
-    {
-      "id": "columns-numbered",
-      "components": [
-        "column"
-      ]
-    }
-  ]
+  "models": [],
+  "filters": []
 }

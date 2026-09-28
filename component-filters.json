@@ -40,24 +40,6 @@
     ]
   },
   {
-    "id": "columns-featured",
-    "components": [
-      "column"
-    ]
-  },
-  {
-    "id": "columns-gallery",
-    "components": [
-      "column"
-    ]
-  },
-  {
-    "id": "columns-numbered",
-    "components": [
-      "column"
-    ]
-  },
-  {
     "id": "columns",
     "components": [
       "column"

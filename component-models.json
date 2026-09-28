@@ -136,6 +136,22 @@
           {
             "name": "Highlight",
             "value": "highlight"
+          },
+          {
+            "name": "Secondary (cream)",
+            "value": "secondary"
+          },
+          {
+            "name": "Dark",
+            "value": "dark"
+          },
+          {
+            "name": "Accent (orange)",
+            "value": "accent"
+          },
+          {
+            "name": "Ticker (scrolling strip)",
+            "value": "ticker"
           }
         ]
       }
@@ -206,63 +222,6 @@
     ]
   },
   {
-    "id": "columns-featured",
-    "fields": [
-      {
-        "component": "text",
-        "valueType": "number",
-        "name": "columns",
-        "value": "",
-        "label": "Columns"
-      },
-      {
-        "component": "text",
-        "valueType": "number",
-        "name": "rows",
-        "value": "",
-        "label": "Rows"
-      }
-    ]
-  },
-  {
-    "id": "columns-gallery",
-    "fields": [
-      {
-        "component": "text",
-        "valueType": "number",
-        "name": "columns",
-        "value": "",
-        "label": "Columns"
-      },
-      {
-        "component": "text",
-        "valueType": "number",
-        "name": "rows",
-        "value": "",
-        "label": "Rows"
-      }
-    ]
-  },
-  {
-    "id": "columns-numbered",
-    "fields": [
-      {
-        "component": "text",
-        "valueType": "number",
-        "name": "columns",
-        "value": "",
-        "label": "Columns"
-      },
-      {
-        "component": "text",
-        "valueType": "number",
-        "name": "rows",
-        "value": "",
-        "label": "Rows"
-      }
-    ]
-  },
-  {
     "id": "columns",
     "fields": [
       {
@@ -278,6 +237,31 @@
         "name": "rows",
         "value": "",
         "label": "Rows"
+      },
+      {
+        "component": "select",
+        "name": "classes",
+        "value": "",
+        "label": "Variant",
+        "valueType": "string",
+        "options": [
+          {
+            "name": "Default",
+            "value": ""
+          },
+          {
+            "name": "Featured",
+            "value": "featured"
+          },
+          {
+            "name": "Numbered",
+            "value": "numbered"
+          },
+          {
+            "name": "Gallery",
+            "value": "gallery"
+          }
+        ]
       }
     ]
   },
@@ -349,15 +333,30 @@
       {
         "component": "text",
         "valueType": "string",
-        "name": "title",
+        "name": "tab",
         "value": "",
-        "label": "Tab Title"
+        "label": "Tab",
+        "description": "Tab this card appears under; cards with the same tab name are grouped together"
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "imageAlt",
+        "label": "Alt Text",
+        "value": ""
       },
       {
         "component": "richtext",
-        "name": "content_richtext",
+        "name": "text",
         "value": "",
-        "label": "Content (articles: image, tag, linked heading, description)",
+        "label": "Text (tag, linked heading, description)",
         "valueType": "string"
       }
     ]
