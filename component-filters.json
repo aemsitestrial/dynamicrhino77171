@@ -18,13 +18,43 @@
       "word-and-definition",
       "cards",
       "columns",
-      "fragment"
+      "fragment",
+      "hero-fullbleed",
+      "columns-featured",
+      "tabs-activity",
+      "accordion-faq",
+      "columns-numbered",
+      "columns-gallery"
+    ]
+  },
+  {
+    "id": "accordion-faq",
+    "components": [
+      "accordion-faq-item"
     ]
   },
   {
     "id": "cards",
     "components": [
       "card"
+    ]
+  },
+  {
+    "id": "columns-featured",
+    "components": [
+      "column"
+    ]
+  },
+  {
+    "id": "columns-gallery",
+    "components": [
+      "column"
+    ]
+  },
+  {
+    "id": "columns-numbered",
+    "components": [
+      "column"
     ]
   },
   {
@@ -40,6 +70,12 @@
       "image",
       "button",
       "title"
+    ]
+  },
+  {
+    "id": "tabs-activity",
+    "components": [
+      "tabs-activity-item"
     ]
   }
 ]

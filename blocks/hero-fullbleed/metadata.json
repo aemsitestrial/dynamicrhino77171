@@ -1,0 +1,29 @@
+{
+  "variantName": "hero-fullbleed",
+  "baseBlock": "hero",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "dark-overlay",
+    "density": "spacious",
+    "purpose": "page-hero",
+    "imagePattern": "background",
+    "structure": "image + tag + h1 + paragraph + 2 CTAs",
+    "hasBgImage": true,
+    "isFullWidth": true,
+    "position": "top"
+  },
+  "contentPattern": {
+    "structure": "row 1 = background image (image, imageAlt); row 2 = rich text with eyebrow paragraph, H1, lead paragraph, CTA links (primary = strong, secondary = em)",
+    "buttonCount": 2,
+    "imageCount": 1
+  },
+  "options": [],
+  "memberVariantIds": ["hero-fullbleed"],
+  "usage": {
+    "pagesUsing": [
+      { "url": "https://wknd-adventures.com/", "instanceId": null, "screenshot": "migration-work/screenshot.png" }
+    ],
+    "reuseCount": 1,
+    "lastUsed": "2026-09-28T00:00:00.000Z"
+  }
+}

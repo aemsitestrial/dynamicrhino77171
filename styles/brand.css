@@ -1,0 +1,45 @@
+/* WKND Adventures brand tokens (extracted from https://wknd-adventures.com/) */
+:root {
+  /* palette */
+  --color-white: #fff;
+  --color-black: #0f1a14;
+  --color-amber: #e8651a;
+  --color-cream: #f5f0e8;
+  --color-gray-100: #f0ece4;
+  --color-gray-200: #ddd8cf;
+  --color-gray-500: #7a8a80;
+  --color-gray-700: #3d4f45;
+
+  /* fonts */
+  --heading-font-family: syncopate, syncopate-fallback, sans-serif;
+  --body-font-family: 'Instrument Sans', instrument-sans-fallback, sans-serif;
+
+  /* semantic colors */
+  --background-color: var(--color-white);
+  --text-color: var(--color-black);
+  --text-muted-color: var(--color-gray-500);
+  --link-color: var(--color-black);
+  --link-hover-color: var(--color-amber);
+  --accent-color: var(--color-amber);
+  --light-color: var(--color-gray-100);
+  --dark-color: var(--color-black);
+
+  /* spacing */
+  --section-padding: 64px;
+  --content-max-width: 1200px;
+  --content-narrow-width: 768px;
+  --content-padding: 24px;
+  --nav-height: 75px;
+
+  /* shapes & motion */
+  --radius-full: 9999px;
+  --radius-card: 20px;
+  --transition-fast: 0.15s ease;
+}
+
+@media (width < 769px) {
+  :root {
+    --section-padding: 32px;
+    --content-padding: 16px;
+  }
+}

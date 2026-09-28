@@ -53,7 +53,13 @@
         "word-and-definition",
         "cards",
         "columns",
-        "fragment"
+        "fragment",
+        "hero-fullbleed",
+        "columns-featured",
+        "tabs-activity",
+        "accordion-faq",
+        "columns-numbered",
+        "columns-gallery"
       ]
     }
   ]
