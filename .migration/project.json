@@ -8,8 +8,9 @@
       "aemAssetsFolderPath": "/content/dam/2026/36/dynamicrhino77171",
       "aemSiteName": "dynamicrhino77171",
       "aemSiteTitle": "dynamicrhino77171",
-      "libraryUrl": "https://github.com/aemsitestrial/dynamicrhino77171",
+      "libraryUrl": "https://main--sta-xwalk-boilerplate--aemysites.aem.page/tools/sidekick/library.json",
       "baseUrl": "https://main--dynamicrhino77171--aemsitestrial.aem.live"
     }
-  }
+  },
+  "type": "xwalk"
 }
